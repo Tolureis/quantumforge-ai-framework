@@ -1,0 +1,34 @@
+name: qiskit_variational_classifier
+seed: 7
+circuit:
+  num_qubits: 4
+  encoding:
+    name: zz_feature_map
+    feature_dimension: 4
+  ansatz:
+    name: real_amplitudes
+    layers: 2
+    entanglement: linear
+  measurement:
+    name: probability
+    wires: [0, 1, 2, 3]
+backend:
+  engine: qiskit
+  device: aer
+  method: statevector
+  shots: null
+  gradient: parameter_shift
+model:
+  mode: hybrid
+  template: classical_quantum_classical
+  input_dimension: 4
+  output_dimension: 2
+  options:
+    qnn: sampler
+    sampler_output_shape: 16
+training:
+  epochs: 10
+  batch_size: 16
+  optimizer: adam
+  learning_rate: 0.01
+

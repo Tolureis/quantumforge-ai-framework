@@ -1,0 +1,42 @@
+name: ids_hybrid_qnn
+seed: 42
+tags: [ids, classification, hybrid]
+circuit:
+  name: ids_quantum_bottleneck
+  num_qubits: 6
+  encoding:
+    name: data_reuploading
+    feature_dimension: 12
+    rotation: Y
+    repeats: 2
+  ansatz:
+    name: hardware_efficient
+    layers: 2
+    entanglement: ring
+    rotation_blocks: [RY, RZ]
+  measurement:
+    name: expectation
+    wires: [0, 1, 2, 3, 4, 5]
+    observable: Z
+backend:
+  engine: pennylane
+  device: default.qubit
+  shots: null
+  gradient: parameter_shift
+  seed: 42
+  noise:
+    name: none
+model:
+  mode: hybrid
+  template: ids_quantum_bottleneck
+  input_dimension: 81
+  hidden_dimensions: [64, 24]
+  output_dimension: 6
+  dropout: 0.2
+training:
+  epochs: 20
+  batch_size: 32
+  optimizer: adam
+  learning_rate: 0.001
+  loss: cross_entropy
+  early_stopping_patience: 5

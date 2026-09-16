@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this software in your academic work, please cite it."
+title: "QuantumForge AI"
+version: 1.2.5
+date-released: 2026-09-09
+license: Apache-2.0
+type: software
+authors:
+  - name: "QuantumForge AI Contributors"
+keywords:
+  - quantum machine learning
+  - Qiskit
+  - PennyLane
+  - hybrid neural network

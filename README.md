@@ -906,7 +906,7 @@ The table describes catalog coverage. Check each entry's support level and
 | 20 | Continuous variables | Gaussian circuits, squeezing, interferometers, and CV-QNNs |
 | 21 | Model templates | Sequential, parallel, residual, ensemble, and domain templates |
 
-The full list of names is in [`docs/CATALOG_TR.md`](docs/CATALOG_TR.md).
+The full list of names is in [`CATALOG_EN.md`](CATALOG_EN.md).
 Programmatic access:
 
 ```python

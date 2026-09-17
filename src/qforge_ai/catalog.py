@@ -824,7 +824,7 @@ _CATEGORY_PURPOSE = {
 _CATEGORY_REFERENCES = {
     "encoding": ("https://doi.org/10.1038/s41586-019-0980-2",),
     "ansatz": ("https://doi.org/10.1038/s42254-021-00348-9",),
-    "entanglement": ("CATALOG_EN.md#2-ansatz-ve-dolaşıklık",),
+    "entanglement": ("CATALOG_EN.md",),
     "physics_chemistry": ("https://doi.org/10.1103/RevModPhys.92.015003",),
     "tensor_network": ("https://doi.org/10.1038/s41567-019-0648-8",),
     "dynamic_circuit": ("https://docs.quantum.ibm.com/guides/classical-feedforward-and-control-flow",),
